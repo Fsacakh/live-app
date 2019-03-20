@@ -1,0 +1,2 @@
+export const GET_SERVICE_TYPE = 'GET_SERVICE_TYPE'
+export const GET_SERVICE_CODE = 'GET_SERVICE_CODE'

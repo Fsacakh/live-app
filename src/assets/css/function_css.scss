@@ -1,0 +1,7 @@
+$browser-default-font-size: 100px !default;
+@function rem($px) {
+  @return $px/2*1px / $browser-default-font-size * 1rem;
+}
+@function remp($px) {
+  @return $px/1*1px / $browser-default-font-size * 1rem;
+}

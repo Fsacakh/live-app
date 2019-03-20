@@ -1,0 +1,75 @@
+
+<template>
+    <div>
+        <page-header @on-click-left="back" :rightOptions="rightOptions" @on-click-right="more">
+            <div slot>新建任务</div>
+        </page-header>
+        <div>
+            <cell title="姓名">
+                <input type="text" placeholder="蔡思成">
+            </cell>
+            <cell title="事件类型" :triangle="true">
+                <input type="text" placeholder="请选择类型">
+                <span slot="right" class="iconfont icon-icon-tiaozhuanjiantou"></span>
+            </cell>
+            <cell title="任务时间" :triangle="true">
+                <input type="text" placeholder="请选择任务时间">
+                <span slot="right" class="iconfont icon-icon-tiaozhuanjiantou"></span>
+            </cell>
+            <remark title="备注"></remark>
+        </div>
+        <div class="submit">
+            <mt-button size="large" type="primary">提交</mt-button>
+        </div>
+    </div>
+</template>
+
+<script>
+    import PageHeader from 'components/header/PageHeader'
+    import cell from '@/components/cell'
+    import liveSelect from '@/components/select'
+    import remark from '@/components/remark'
+    import Vue from 'vue'
+    import {
+        Button,
+    } from 'mint-ui'
+    Vue.component(Button.name, Button);
+    export default {
+        components: {
+            PageHeader,
+            cell,
+            liveSelect,
+            remark
+        },
+        data() {
+            return {
+                rightOptions: {
+                    icon: ''
+                }
+            }
+        },
+        methods: {
+            back() {},
+            more() {}
+        },
+        mounted() {}
+    }
+</script>
+
+<style lang="scss">
+    .submit {
+        padding: 0 rem(20);
+        margin-top: rem(65);
+    }
+    .car {
+        margin-top: rem(10);
+    }
+    .tost {
+        width: 100%;
+        height: rem(72);
+        text-align: center;
+        color: #ffffff;
+        background: rgba(254, 56, 36, 0.90);
+        line-height: rem(72);
+    }
+</style>
